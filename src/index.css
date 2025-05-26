@@ -1,0 +1,180 @@
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+
+/* Layout wrappers */
+/* .app-container {
+  display: flex;
+  flex-direction: row;
+  height: 100vh;
+  border-radius: 10px;
+  
+} */
+
+.app-container {
+  display: flex;
+  flex-direction: row;
+  height: 100vh;
+  overflow: hidden; /* Prevents double scrollbars */
+  /* width: 1800px; */
+}
+
+/* .main-content {
+  flex: 1;
+  padding: 24px;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+} */
+/* /////////////////////// */
+/* .main-content {
+  flex: 1;
+  overflow-y: auto;
+  height: 100vh; 
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+} */
+
+
+
+.main-content {
+  flex: 1;
+  overflow-y: auto;
+  height: 100vh;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  transition: margin-left 0.3s ease-in-out;
+}
+
+.dashboard-grid {
+  display: flex;
+  flex-direction: row;
+  gap: 2px; /* try 4px or even 0px if needed */
+  
+}
+
+.left-column {
+  flex: 2;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  
+  
+}
+
+.right-column {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  /* margin-right: 400px; */
+}
+/* 
+.anatomy-metrics {
+  display: flex;
+   gap: 12px; 
+} */
+
+.anatomy-metrics {
+  display: flex;
+  gap: 16px; 
+  max-width: 560px; 
+}
+
+/* ✅ Responsive adjustments */
+@media (max-width: 1024px) {
+  .dashboard-grid {
+    flex-direction: column;
+  }
+
+  .anatomy-metrics {
+    flex-direction: column;
+  }
+
+  .left-column, .right-column {
+    width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  /* .main-content {
+    padding: 16px;
+  }
+
+  .app-container {
+    flex-direction: column;
+  } */
+
+  .app-container {
+    flex-direction: column;
+    height: auto;         /* Let it grow */
+    min-height: 100vh;
+  }
+
+  /* .main-content {
+    height: auto;
+    overflow-y: visible; 
+  } */
+
+
+ .main-content {
+    padding: 16px;
+    height: auto;
+    overflow-y: visible;
+  }
+
+  .dashboard-grid {
+    gap: 16px;
+  }
+
+  .anatomy-metrics {
+     gap: 8px; /* or even 4px for tighter spacing */
+  }
+}
+
+.health-metrics {
+  flex: 0 0 250px;
+  max-width: 250px;
+}
+
+@media (max-width: 768px) {
+  .health-metrics {
+    flex: 1;
+    max-width: 100%;
+  }
+}
+@media (max-width: 600px) {
+  .upcoming-grid {
+    grid-template-columns: 1fr !important;
+  }
+}
+
+
+
+
+.dashboard-heading-row {
+  display: flex;
+  justify-content: flex-start; /* Align items to the left */
+  align-items: center;
+  gap: 600px; /* Small space between heading and text */
+  margin-bottom: 16px; /* Reduced bottom margin */
+}
+
+.dashboard-heading {
+  font-size: 32px;
+  font-weight: bold;
+  color: rgb(47,50,155);
+}
+
+.calendar-header-week {
+  font-size: 14px;
+  color: #666;
+}

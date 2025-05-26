@@ -1,0 +1,83 @@
+.anatomy-card-container {
+  background-color: #f0f9fb;
+  border-radius: 12px;
+  padding: 16px;
+  flex: 1;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  min-width: 600px;
+}
+
+.anatomy-card-image {
+  width: 180px;
+  border-radius: 8px;
+}
+
+.anatomy-label {
+  position: absolute;
+  color: #fff;
+  padding: 4px 8px;
+  border-radius: 8px;
+  font-size: 12px;
+}
+
+.anatomy-label.heart {
+  top: 20%;
+  left: 60%;
+  background-color: #4f46e5;
+}
+
+.heart1{
+   margin-right: 6px;
+   color:red;
+}
+
+.anatomy-label.leg {
+  bottom: 10%;
+  left: 25%;
+  background-color: #06b6d4;
+}
+.leg1{
+  margin-right: 6px;
+  color: yellow;
+}
+
+/* ========== Responsive ========== */
+@media (max-width: 768px) {
+  .anatomy-card-container {
+    min-width: auto;
+    padding: 12px;
+  }
+
+  .anatomy-card-image {
+    width: 140px;
+  }
+
+  .anatomy-label {
+    font-size: 10px;
+    padding: 3px 6px;
+  }
+}
+
+@media (max-width: 480px) {
+  .anatomy-card-container {
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+  }
+
+  .anatomy-card-image {
+    width: 120px;
+  }
+
+  .anatomy-label.heart {
+    top: 18%;
+    left: 58%;
+  }
+
+  .anatomy-label.leg {
+    bottom: 8%;
+    left: 18%;
+  }
+}
